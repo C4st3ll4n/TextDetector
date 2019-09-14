@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -90,7 +91,19 @@ public class MainActivity extends AppCompatActivity {
 
         faceDetector = FirebaseVision.getInstance().getVisionFaceDetector(opts);
         faceDetector.detectInImage(fvi).addOnSuccessListener(firebaseVisionFaces -> {
-                        Toast.makeText(this, "And we have a face !!", Toast.LENGTH_SHORT).show();
+
+            if (firebaseVisionFaces.size() > 1) {
+                int indice = 0;
+                for (FirebaseVisionFace face : firebaseVisionFaces) {
+                    AlertDialog ad = new AlertDialog.Builder(MainActivity.this)
+                            .setTitle("Face "+(++indice)+" encontrada")
+                            .setMessage("Probabilidade de sorriso: " + (face.getSmilingProbability() *100)+"%")
+                            .setPositiveButton("OK", (v, p) -> v.dismiss())
+                            .create();
+                    ad.show();
+                }
+            }
+                       // Toast.makeText(this, "And we have a face !!", Toast.LENGTH_SHORT).show();
         }).addOnFailureListener(e -> Toast.makeText(this, "Nenhuma face detectada!", Toast.LENGTH_SHORT).show());
     }
 
