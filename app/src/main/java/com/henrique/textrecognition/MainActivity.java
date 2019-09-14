@@ -83,10 +83,9 @@ public class MainActivity extends AppCompatActivity {
     private void recognizeFace(Bitmap b) {
         fvi = FirebaseVisionImage.fromBitmap(b);
         FirebaseVisionFaceDetectorOptions opts = new FirebaseVisionFaceDetectorOptions.Builder()
-                .setPerformanceMode(ACCURATE)
-                .setClassificationMode(ALL_CLASSIFICATIONS)
-                .setMinFaceSize(0.15f)
-                .enableTracking()
+                .setPerformanceMode(FirebaseVisionFaceDetectorOptions.ACCURATE)
+                .setLandmarkMode(FirebaseVisionFaceDetectorOptions.ALL_LANDMARKS)
+                .setClassificationMode(FirebaseVisionFaceDetectorOptions.ALL_CLASSIFICATIONS)
                 .build();
 
         faceDetector = FirebaseVision.getInstance().getVisionFaceDetector(opts);
