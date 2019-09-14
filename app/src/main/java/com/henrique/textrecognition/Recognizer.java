@@ -4,9 +4,13 @@ import android.app.Application;
 
 import com.google.firebase.FirebaseApp;
 
-public class LCOTextRecognization extends Application {
+public class Recognizer extends Application {
 
     public static final String RESULT_TEXT = "RESULT_TEXT";
+
+    public static final String RESULT_FACE = "RESULT_FACE";
+    public static final String RESULT_DIALOG = "RESULT_DIALOG";
+
     @Override
     public void onCreate() {
         super.onCreate();

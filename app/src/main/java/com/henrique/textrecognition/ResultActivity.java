@@ -18,7 +18,7 @@ public class ResultActivity extends AppCompatActivity {
 
         txtResult = findViewById(R.id.txtResultado);
         btnVoltar = findViewById(R.id.btnVoltar);
-        resultText = getIntent().getStringExtra(LCOTextRecognization.RESULT_TEXT);
+        resultText = getIntent().getStringExtra(Recognizer.RESULT_TEXT);
         txtResult.setText(resultText);
         btnVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
