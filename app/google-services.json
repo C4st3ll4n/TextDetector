@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "134032740761",
+    "firebase_url": "https://pushintro99.firebaseio.com",
+    "project_id": "pushintro99",
+    "storage_bucket": "pushintro99.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134032740761:android:971c49cfdd9822cca5c308",
+        "android_client_info": {
+          "package_name": "com.henrique.textrecognition"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "134032740761-kfsrafgbpos25n8nkrbbrrbgit5d6tvq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.henrique.textrecognition",
+            "certificate_hash": "5989283f980d585626fecbb03576057ccbef6689"
+          }
+        },
+        {
+          "client_id": "134032740761-t0cvrhaq3orokedb6iq72q0ou1f2gpo3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgDf8i1qkLHMsZpaqxsix4mIzNNT-e6dg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "134032740761-t0cvrhaq3orokedb6iq72q0ou1f2gpo3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
